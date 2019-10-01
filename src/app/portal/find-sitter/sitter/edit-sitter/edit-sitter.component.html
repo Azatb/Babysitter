@@ -1,0 +1,73 @@
+<div class="container">
+  <form novalidate [formGroup]="sitterForm" (ngSubmit)="onSubmit(sitterForm)">
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Name" formControlName="name" id="name" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Username" formControlName="username" id="username" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" formControlName="password" id="password" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Gender" formControlName="gender" id="gender" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field>
+          <input type="date" matInput placeholder="Birthdate" formControlName="birthDate" id="birthDate" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <input type="number" matInput placeholder="Hourly wage" formControlName="hourlyWage" id="hourlyWage" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Address" formControlName="address" id="address" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <section class="section">
+          <mat-checkbox formControlName="noCriminalRecord" class="form-check-input" id="noCriminalRecord">No criminal
+            record</mat-checkbox>
+        </section>
+      </div>
+      <div class="col">
+        <section class="section">
+          <mat-checkbox formControlName="noChildRecord" class="form-check-input" id="noChildRecord">No child record</mat-checkbox>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Zipcode" formControlName="zipcode" id="zipcode" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field>
+          <input type="text" matInput placeholder="City" formControlName="city" id="city" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-stroked-button id="save" type="submit">Save</button>
+  </form>
+</div>

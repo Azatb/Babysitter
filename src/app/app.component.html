@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-md navbar-light bg-grey fixed-top">
+    <a class="navbar-brand" routerLink="/home">Velkommen til KEA - Find A Sitter.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="login" routerLink="/login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>
+  <!-- kan bruge contaact og login i router outlet--> 
+

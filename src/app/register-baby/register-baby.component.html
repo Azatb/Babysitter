@@ -1,0 +1,74 @@
+<form novalidate [formGroup]="babyForm" (ngSubmit)="onSubmit(babyForm)">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" formControlName="username" class="form-control" id="username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" formControlName="password" class="form-control" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" formControlName="name" class="form-control" id="name" />
+          </div>
+          <div class="alert alert-danger" *ngIf="babyForm.controls.name.errors?.required && submitted">
+            Name is required
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input type="text" formControlName="gender" class="form-control" id="gender" />
+          </div>
+          <div class="alert alert-danger" *ngIf="babyForm.controls.gender.errors?.required && submitted">
+            Sorry but some sort of gender is required
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" formControlName="birthdate" class="form-control" id="Birthdate" />
+          </div>
+          <div class="alert alert-danger" *ngIf="babyForm.controls.birthdate.errors?.required && submitted">
+            Birthdate is required
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="specialNeeds">Special Needs:</label>
+            <textarea type="text" class="form-control" id="specialNeeds"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" formControlName="address" class="form-control" id="address" />
+          </div>
+          <div class="alert alert-danger" *ngIf="babyForm.controls.address.errors?.required && submitted">
+            Address is required
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-4">
+                <label for="zipcode">Zipcode</label>
+                <input type="text" formControlName="zipcode" class="form-control" id="zipcode" />
+              </div>
+              <div class="col">
+                <label for="city">City</label>
+                <input type="text" formControlName="city" class="form-control" id="city" />
+              </div>
+            </div>
+            <div class="alert alert-danger" *ngIf="babyForm.controls.zipcode.errors?.required && submitted || babyForm.controls.zipcode.errors?.minlength && submitted || babyForm.controls.zipcode.errors?.maxlength && submitted">
+              Zipcode is required with 4 digits
+            </div>
+            <div class="alert alert-danger" *ngIf="babyForm.controls.zipcode.errors?.pattern">
+              Letters in zipcode not allowed
+            </div>
+            <div class="alert alert-danger" *ngIf="babyForm.controls.city.errors?.required && submitted">
+              City is required
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" (click)="submitted = true" class="btn btn-success">Register</button>
+    </div>
+  </div>
+</form>

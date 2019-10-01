@@ -1,0 +1,20 @@
+Tobias is from {{birthday | date | uppercase}}
+
+{{ 0.743 | percent }}
+{{ 132 | currency:'DKK' }}
+
+
+
+<div class="container">
+    <mat-form-field>
+      <input type="number" matInput placeholder="Max hourly wage" [(ngModel)]="search"/>
+    </mat-form-field>
+      
+  <div class="row">
+    <div *ngFor="let sitter of sitters | filterSitters: search">
+      <div class="col container" >
+        <app-sitter [sitterInput]="sitter" (sitterDetailsClicked)="onSitterClicked($event)"></app-sitter>
+      </div>
+    </div>
+  </div>
+</div>

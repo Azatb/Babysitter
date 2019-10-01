@@ -1,0 +1,14 @@
+.btn-group.full-span {
+    display: flex;
+}
+  
+.full-span .btn {
+    flex: 1
+}
+
+.btn.left-border{
+    border-left: 2px solid whitesmoke
+}
+.btn.right-border{
+    border-right: 2px solid whitesmoke
+}
